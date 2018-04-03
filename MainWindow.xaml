@@ -1,0 +1,26 @@
+﻿<Window x:Class="PulseWidthDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PulseWidthDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox x:Name="txtFrameRate" HorizontalAlignment="Left" Height="23" Margin="576,302,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="581,341,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="576,70,0,0" VerticalAlignment="Top" Width="164" Maximum="1" AutoToolTipPlacement="TopLeft" LargeChange="0.1" TickFrequency="0.1" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPrecision="1" Value="1" ValueChanged="slider_ValueChanged"/>
+        <Label x:Name="label" Content="Speed" HorizontalAlignment="Left" Margin="576,39,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Frame rate (fps)" HorizontalAlignment="Left" Margin="576,274,0,0" VerticalAlignment="Top" Height="28" RenderTransformOrigin="0.613,1.928"/>
+        <Button x:Name="btnRunSim" Content="Run simulation" HorizontalAlignment="Left" Margin="536,514,0,0" VerticalAlignment="Top" Width="120" Click="btnRunSim_Click"/>
+        <Label x:Name="label2" Content="Update interval (seconds)" HorizontalAlignment="Left" Margin="576,212,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUpdateInterval" HorizontalAlignment="Left" Height="23" Margin="581,243,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="232" Margin="38,105,0,0" VerticalAlignment="Top" Width="513">
+            <Rectangle x:Name="line" Fill="#FF4E4EE4" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="473" Canvas.Left="10" Canvas.Top="42"/>
+            <Rectangle x:Name="robot" HorizontalAlignment="Left" Height="16" VerticalAlignment="Top" Width="17" Stroke="#FFF08B13" StrokeThickness="3" Canvas.Left="23" Canvas.Top="103"/>
+        </Canvas>
+        <Label x:Name="label3" Content="Robot speed (px/sec)" HorizontalAlignment="Left" Margin="385,480,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtRobotSpeed" HorizontalAlignment="Left" Height="23" Margin="387,511,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
